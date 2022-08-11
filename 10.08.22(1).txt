@@ -1,0 +1,32 @@
+1.
+#include <stdio.h>
+int main()
+{
+   int n,r,x,y,d=1,sum=0;
+   printf("enter a number\n");
+   scanf("%d",&n);
+   printf("enter x and y values ");
+   scanf("%d%d",&x,&y);
+   while(n>0)
+   {
+   r=n%10;    
+   if(r==x)
+     sum=sum+y*d;
+     else
+        sum=sum+r*d;
+        d=d*10;
+        n=n/10;
+      
+   }
+   printf("%d\n",sum);
+    return 0;
+}
+
+INPUT :
+enter a number
+12345
+enter x and y values 3 9
+
+OUTPUT :
+12945
+ 
