@@ -1,0 +1,26 @@
+//2.missing number
+
+#include <stdio.h>
+int main()
+{ 
+  int n,i,a[50],sum=0,total,x;
+  printf("enter the limit");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+      scanf("%d",&a[i]);
+      sum=sum+a[i];
+  }
+  n++;
+  total=(n*(n+1))/2;
+  x=(total-sum);
+  printf("missing number is %d",x);
+    return 0;
+}
+
+INPUT:
+enter the limit 6
+1 2 3 5 6 7
+
+OUTPUT :
+missing number is 4
