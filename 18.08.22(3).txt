@@ -1,0 +1,45 @@
+//2.To find sum of factorials of given elements in the array
+
+#include <stdio.h>
+void main()
+{
+   int arr[5];
+   int n=1,i,fact=1,sum=0;
+  printf("enter five numbers\n");
+  for(i=0;i<5;i++)
+  {
+      scanf("%d",&arr[i]);
+  }
+  printf("factors are\n");
+   for(i=0;i<5;i++)
+   {
+       if(arr[i]<10)
+       {
+           for(n=1;n<=arr[i];n++)
+           {
+               fact=fact*n;
+           }
+           printf("the factorial of %d is %d\n",arr[i],fact);
+           sum=sum+fact;
+       }
+      fact=1;
+   }
+   printf("the sum is %d",sum);
+}
+
+INPUT :
+enter five numbers
+2
+3
+4
+5
+6
+
+OUTPUT:
+factors are
+the factorial of 2 is 2
+the factorial of 3 is 6
+the factorial of 4 is 24
+the factorial of 5 is 120
+the factorial of 6 is 720
+the sum is 872
