@@ -1,0 +1,29 @@
+//1. To print "unique" if all elements in array are same ,else print "duplicate".
+
+#include <stdio.h>
+int main()
+{
+int i,j,temp=0;
+int arr[]={19,65,81,0,9,12,4};
+int len=sizeof(arr)/sizeof(int);
+for(i=0;i<len;i++)
+{
+    temp=0;
+    for(j=0;j<len;j++)
+    {
+        if(i!=j)
+        {
+            if(arr[i]==arr[j])
+            temp++;
+        }
+    }
+}
+   if(temp==0) 
+        printf("UNIQUE");
+   else
+        printf("DUPLICATE");
+    return 0;
+}
+
+OUTPUT :
+UNIQUE
