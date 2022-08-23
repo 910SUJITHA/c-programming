@@ -1,0 +1,48 @@
+//2. sum of column in an array
+
+#include <stdio.h>
+int main()
+{
+  int a[100][100];
+  int i,j,r,c,sum=0,ch;
+  
+  printf(" enter how many rows\n");
+  scanf("%d",&r);
+  printf("enter how many columns\n");
+  scanf("%d",&c);
+  
+  printf("enter elements into array\n");
+  for(i=0;i<r;i++)
+     {
+         for(j=0;j<c;j++)
+         {
+             scanf("%d",&a[i][j]);
+         }
+     }
+     
+    printf("Enter a column number");
+    scanf("%d",&ch);
+        for(i=ch;i<r;i++)
+             {
+               for(j=0;j<c;j++)
+                 {
+                        sum=sum+a[j][i];
+                 }
+                 printf("%d column sum = %d",ch,sum);
+                 break;
+             }
+   return 0;
+}
+
+INPUT:
+enter how many rows
+3
+enter how many columns
+3
+enter elements into array
+1 2 3 
+4 5 6
+7 8 9
+Enter a column number2
+OUTPUT:
+2 column sum = 18
