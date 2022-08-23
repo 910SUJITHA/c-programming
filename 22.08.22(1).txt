@@ -1,0 +1,48 @@
+//1. row sum in an array
+
+#include <stdio.h>
+int main()
+{
+  int a[100][100];
+  int i,j,r,c,sum=0,ch;
+  
+  printf(" enter how many rows\n");
+  scanf("%d",&r);
+  printf("enter how many columns\n");
+  scanf("%d",&c);
+  
+  printf("enter elements into array\n");
+  for(i=0;i<r;i++)
+     {
+         for(j=0;j<c;j++)
+         {
+             scanf("%d",&a[i][j]);
+         }
+     }
+     
+    printf("Enter a row number");
+    scanf("%d",&ch);
+        for(i=ch;i<r;i++)
+             {
+               for(j=0;j<c;j++)
+                 {
+                        sum=sum+a[i][j];
+                 }
+        printf("%d row sum =%d ",ch,sum);
+        break;
+             }
+   return 0;
+}
+
+INPUT :
+enter how many rows
+3
+enter how many columns
+3
+enter elements into array
+1 2 9
+1 2 8
+1 2 7
+enter a row number 1
+OUTPUT :
+1 row sum =11 
