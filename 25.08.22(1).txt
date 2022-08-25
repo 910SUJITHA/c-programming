@@ -1,0 +1,22 @@
+//1. To print number of words in a string.
+
+#include <stdio.h>
+int main() 
+{
+  int i,count=1;
+  char str[50];
+  printf("enter a string :");
+  scanf("%[^\n]s",str);
+  for(i=0;str[i]!='\0';i++)
+  {
+  if(str[i]==' ')
+  count++;
+  }
+  printf("no.of words = %d",count);
+    return 0;
+}
+
+INPUT:
+enter a string : I love my country
+OUTPUT:
+no.of words = 4
