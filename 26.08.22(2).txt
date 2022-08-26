@@ -1,0 +1,48 @@
+//2.To print given string palindrome or not.
+
+#include <stdio.h>
+int main() 
+{
+   char s[20];
+   char temp;
+   int i,j,size;
+   printf("Enter a string");
+   gets(s);
+   size=strlen(s);
+   i=0;
+   j=size-1;
+   while(i<(size-1))
+   {
+     temp=s[i];
+     s[i]=s[j];
+     s[j]=temp;
+     i++;
+     j--;
+     while(i<(size/2))
+    {
+      if(s[i]==s[j])
+      {
+         printf("palindrom\n");
+         break;
+      }
+      else
+      {
+         printf("not palindrome");
+         break;
+      }
+    }
+   }
+   
+    return 0;
+}
+
+INPUT 1:
+Enter a string: madam
+OUTPUT 1:
+palindrom
+
+INPUT 2:
+Enter a string:suji
+OUTPUT 2:
+not palindrome
+
