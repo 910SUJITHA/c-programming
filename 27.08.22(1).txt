@@ -1,0 +1,56 @@
+//1. To print the given strings are Anagrams or not.
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char s1[20];
+    char s2[20];
+    int i,j,temp,n,count;
+    printf("Enter two String :\n");
+    gets(s1);
+    gets(s2);
+    n=strlen(s1);
+    for(i=0;i<n-1;i++)
+    {
+        for(j=0;j<n-i-1;j++)
+        {
+            if(s1[j]>s1[j+1])
+            {
+                temp=s1[j];
+                s1[j]=s1[j+1];
+                s1[j+1]=temp;
+            }
+            if(s2[j]>s2[j+1])
+            {
+                temp=s2[j];
+                s2[j]=s2[j+1];
+                s2[j+1]=temp;
+            }
+        }
+    }
+for(i=0;s1[i]!='\0';i++)
+{
+    if(s1[i]==s2[i])
+    count++;
+}
+if(count==n)
+  printf("ANAGRAMS");
+  else
+    printf("NOT ANAGRAMS");
+    return 0;
+}
+
+INPUT 1:
+Enter two String :
+state
+taste
+OUTPUT 1 :
+ANAGRAMS
+
+INPUT 2:
+Enter two String :
+sujitha
+bhargav
+OUTPUT 2:
+NOT ANAGRAMS
