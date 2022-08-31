@@ -1,0 +1,31 @@
+//2. To print all characters "a" into upper case.
+
+#include <stdio.h>
+int main()
+{
+    char str[50];
+    int  i=0;
+   printf("enter a string: ");
+   gets(str);
+    while(str[i]!='\0')
+    {
+        if(str[i]=='a' )
+            str[i]=str[i]-32;
+        i++;
+    }
+    printf("After converting a into upper case the string becomes:\n");
+    puts(str);
+}
+
+INPUT 1 :
+enter a string: alphabet
+OUTPUT 1:
+After converting a into upper case the string becomes:
+AlphAbet
+
+INPUT 2:
+enter a string: suji
+OUTPUT 2:
+After converting a into upper case the string becomes:
+suji
+
