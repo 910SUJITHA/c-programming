@@ -1,0 +1,26 @@
+//2. To find factorial of given numberr using functions with return value.
+
+#include <stdio.h>
+void main()
+{
+  int n,ans;
+  printf("Enter a number:");
+  scanf("%d",&n);
+  ans=fact(n);
+  printf(Factorial of %d = %d",n,ans);
+}
+int fact(int n)
+{
+    int i=1,sum=1;
+    while(i<=n)
+    {
+     sum=sum*i;
+     i++;
+    }
+return (sum);
+}
+
+INPUT :
+Enter a number:6
+OUTPUT:
+Factorial of 6 = 720
