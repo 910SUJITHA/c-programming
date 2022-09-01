@@ -1,0 +1,31 @@
+//1. To check if the given number is even or odd using functions with return value.
+
+#include <stdio.h>
+void main()
+{
+  int x,ans;
+  printf("Enter a number:");
+  scanf("%d",&x);
+  ans=checkevenodd(x);
+  if(ans==0)
+  printf("EVEN");
+  else
+  printf("ODD");
+}
+int checkevenodd(int x)
+{
+    if(x%2==0)
+    return (0);
+    else
+    return (1);
+}
+
+INPUT 1:
+Enter a number:64
+OUTPT 1:
+EVEN
+
+INPUT 2:
+Enter a number:65
+OUTPUT 2:
+ODD
