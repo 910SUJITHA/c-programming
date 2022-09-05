@@ -1,0 +1,36 @@
+/*1. To read n  value and n elements into array then to print n elements without using for loop*/
+
+#include <stdio.h>
+void main()
+{  
+    int n,i=0,x[5];
+    printf("Enter size of array :");
+    scanf("%d",&n);
+    printf("Enter elements into array :");
+  while(i<n)
+  {
+      scanf("%d",&x[i]);
+      i++;
+  }
+  printf("Elements in the array :");
+  display(x,0,n);
+}
+void display(int x[],int start,int len)
+{
+    if(start>=len)
+    return;
+    else
+      printf("\n%d",x[start]);
+      display(x,start+1,len);
+}
+
+INPUT:
+Enter size of array :5
+Enter elements into array :9 8 7 6 5
+OUTPUT:
+Elements in the array :
+9
+8
+7
+6
+5
