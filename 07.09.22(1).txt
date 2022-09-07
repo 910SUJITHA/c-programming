@@ -1,0 +1,35 @@
+//1. Program to check if number is fiboncii or not using pointers.
+
+#include<stdio.h>
+int main()
+    {
+      int n,f1,f2,f;
+      printf("Enter the number to check:");
+      scanf("%d",&n);
+      f1=0;
+      f2=1;
+      if(n==0)
+      printf("Fiboncii series");
+      f=f1+f2;
+      while(f<n)
+      {
+          f1=f2;
+          f2=f;
+          f=f1+f2;
+      }
+      if(f==n)
+      printf("Yes");
+      else
+      printf("No");
+      return 0;
+    }
+
+INPUT 1:
+Enter the number to check:5
+OUTPUT 1:
+Yes
+ 
+INPUT 2:
+Enter the number to check:4
+OUTPUT 2:
+No
